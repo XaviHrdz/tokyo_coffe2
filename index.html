@@ -1,0 +1,340 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- =====================================
+         CONFIGURACIÓN GENERAL
+    ===================================== -->
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Tokyo Coffee | Tu momento favorito</title>
+
+    <meta name="description"
+          content="Disfruta del mejor café, bebidas y postres en Tokyo Coffee. Explora nuestro menú y realiza tu pedido por WhatsApp.">
+
+    <!-- =====================================
+         FAVICON - GATITO SIN FONDO
+    ===================================== -->
+
+    <link
+        rel="icon"
+        type="image/png"
+        href="https://raw.githubusercontent.com/XaviHrdz/Tokyo-Coffee/main/557832_8d560977cc47150d55c261ff88f7ac99-21_11_2022%2017_47_17.png"
+    >
+
+    <!-- =====================================
+         FUENTES DE GOOGLE
+    ===================================== -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- CONEXIÓN CSS -->
+    <link rel="stylesheet" href="./style.css">
+
+    <!-- CONEXIÓN JAVASCRIPT -->
+    <script src="./script.js" defer></script>
+
+</head>
+
+<body>
+
+    <!-- =====================================
+         ENCABEZADO Y NAVEGACIÓN
+    ===================================== -->
+
+    <header>
+
+        <nav>
+
+            <!-- LOGOTIPO OFICIAL -->
+
+            <a href="#inicio" class="logo">
+
+                <img
+                    src="https://github.com/XaviHrdz/Tokyo-Coffee/blob/main/557832_8d560977cc47150d55c261ff88f7ac99-21_11_2022%2017_47_17.png"
+                    alt="Logotipo oficial de Tokyo Coffee"
+                    class="logo-imagen"
+                    width="60"
+                    height="60"
+                >
+
+                <span>Tokyo Coffee</span>
+
+            </a>
+
+            <!-- MENÚ DE NAVEGACIÓN -->
+
+            <ul>
+
+                <li>
+                    <a href="#inicio">Inicio</a>
+                </li>
+
+                <li>
+                    <a href="#menu">Menú</a>
+                </li>
+
+                <li>
+                    <a href="#nosotros">Nosotros</a>
+                </li>
+
+                <li>
+                    <a href="#contacto">Contacto</a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =====================================
+         CONTENIDO PRINCIPAL
+    ===================================== -->
+
+    <main>
+
+        <!-- =====================================
+             INICIO - HERO
+        ===================================== -->
+
+        <section id="inicio" class="hero">
+
+            <h1>
+                El café perfecto para cada momento
+            </h1>
+
+            <p>
+                Descubre el sabor de un buen café,
+                acompañado de momentos inolvidables.
+
+                En Tokyo Coffee cada taza es especial.
+            </p>
+
+            <a href="#menu" class="boton">
+                Explorar nuestro menú
+            </a>
+
+        </section>
+
+
+        <!-- =====================================
+             MENÚ INTERACTIVO
+        ===================================== -->
+
+        <section id="menu">
+
+            <h2>Nuestro menú</h2>
+
+            <p>
+                Descubre nuestras bebidas y postres.
+                Elige tus favoritos y prepara tu pedido.
+            </p>
+
+
+            <!-- FILTROS DE CATEGORÍAS -->
+
+            <div class="filtros">
+
+                <button
+                    type="button"
+                    class="filtro activo"
+                    data-categoria="todos">
+                    Todos
+                </button>
+
+                <button
+                    type="button"
+                    class="filtro"
+                    data-categoria="calientes">
+                    Cafés calientes
+                </button>
+
+                <button
+                    type="button"
+                    class="filtro"
+                    data-categoria="frios">
+                    Bebidas frías
+                </button>
+
+                <button
+                    type="button"
+                    class="filtro"
+                    data-categoria="postres">
+                    Postres
+                </button>
+
+            </div>
+
+
+            <!-- PRODUCTOS DINÁMICOS -->
+
+            <div
+                class="productos"
+                id="lista-productos">
+            </div>
+
+
+            <!-- =====================================
+                 CARRITO DE COMPRAS
+            ===================================== -->
+
+            <div class="carrito" id="carrito">
+
+                <h2>
+                    🛒 Tu pedido
+                    (<span id="contador">0</span>)
+                </h2>
+
+                <p>
+                    Revisa los productos que deseas ordenar.
+                </p>
+
+
+                <!-- LISTA DE PRODUCTOS -->
+
+                <div id="lista-carrito">
+
+                    <p>
+                        Tu carrito está vacío.
+                    </p>
+
+                </div>
+
+
+                <!-- TOTAL DEL PEDIDO -->
+
+                <h3>
+                    Total:
+                    <span id="total">$0 MXN</span>
+                </h3>
+
+
+                <!-- ACCIONES DEL CARRITO -->
+
+                <div class="acciones-carrito">
+
+                    <button
+                        type="button"
+                        id="vaciar-carrito">
+                        Vaciar carrito
+                    </button>
+
+                    <button
+                        type="button"
+                        id="pedir-whatsapp">
+                        Enviar pedido por WhatsApp
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             SOBRE NOSOTROS
+        ===================================== -->
+
+        <section id="nosotros">
+
+            <h2>Conoce Tokyo Coffee</h2>
+
+            <p>
+                En Tokyo Coffee creemos que cada taza
+                de café cuenta una historia.
+            </p>
+
+            <p>
+                Creamos un espacio acogedor donde
+                puedes relajarte, compartir momentos
+                especiales, estudiar o simplemente
+                disfrutar de tu bebida favorita.
+            </p>
+
+            <p>
+                Nuestro compromiso es ofrecerte
+                bebidas deliciosas, ingredientes
+                de calidad y una experiencia única.
+            </p>
+
+        </section>
+
+
+        <!-- =====================================
+             CONTACTO Y UBICACIÓN
+        ===================================== -->
+
+        <section id="contacto">
+
+            <h2>Visítanos</h2>
+
+            <p>
+                Nos encantará recibirte.
+            </p>
+
+            <p>
+                📍 Puebla, México
+            </p>
+
+            <p>
+                🕒 Lunes a domingo
+                8:00 AM - 9:00 PM
+            </p>
+
+            <p>
+                ☕ Disfruta de tu café favorito
+                en Tokyo Coffee.
+            </p>
+
+
+            <!-- WHATSAPP DEL NEGOCIO -->
+
+            <a
+                href="https://wa.me/521XXXXXXXXXX"
+                target="_blank"
+                rel="noopener noreferrer">
+                Contáctanos por WhatsApp
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================
+         PIE DE PÁGINA
+    ===================================== -->
+
+    <footer>
+
+        <p>
+            © 2026 Tokyo Coffee.
+            Todos los derechos reservados.
+        </p>
+
+        <p>
+            Hecho con ☕ y mucho amor.
+        </p>
+
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+
+/* ESTILOS DE TOKYO COFFEE */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #F5E6D3;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+header {
+    background-color: #3E2723;
+    color: white;
+    padding: 50px 20px;
+}
+
+h1 {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+main {
+    padding: 80px 20px;
+}
+
+h2 {
+    color: #5D4037;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+main p {
+    margin-bottom: 30px;
+}
+
+.boton {
+    display: inline-block;
+    background-color: #795548;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+.boton:hover {
+    background-color: #4E342E;
+}
